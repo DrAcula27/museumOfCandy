@@ -18,4 +18,21 @@ body {
 
 #mainNavbar .navbar-brand {
     color: #ea1c2c;
+    font-size: 1.5rem;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+#headingGroup span {
+    color: #ea1c2c;
+}
+
+@media (max-width: 1250px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    } 
 }
