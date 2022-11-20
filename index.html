@@ -29,6 +29,7 @@
   </head>
 
   <body>
+    <!-- navbar -->
     <nav
       id="mainNavbar"
       class="navbar navbar-dark navbar-expand-md py-0 fixed-top"
@@ -56,6 +57,7 @@
         </ul>
       </div>
     </nav>
+    <!-- content header section -->
     <section class="container-fluid px-0">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -81,7 +83,9 @@
         </div>
       </div>
     </section>
+    <!-- content section -->
     <section class="container-fluid px-0">
+      <!-- first row of content -->
       <div class="row align-items-center content">
         <div class="col-md-6 order-2 order-md-1">
           <img
@@ -92,7 +96,7 @@
         </div>
         <div class="col-md-6 text-center order-1 order-md-2">
           <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 blurb">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
               <h2>MUSEUM OF CANDY</h2>
               <img
                 class="d-none d-lg-inline"
@@ -109,17 +113,46 @@
           </div>
         </div>
       </div>
+      <!-- second row of content -->
+      <div class="row align-items-center content">
+        <div class="col-md-6 text-center">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>MUSEUM OF CANDY</h2>
+              <img
+                class="d-none d-lg-inline"
+                src="./imgs/lolli_icon.png"
+                alt="lollipop icon"
+              />
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                quis accusamus ipsam excepturi et voluptates a facere
+                perspiciatis fugit veniam, soluta rerum recusandae inventore
+                quia nihil ducimus repellat incidunt vel.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            class="img-fluid"
+            src="./imgs/gumball.png"
+            alt="3 glasses of milk with a donut on the straw"
+          />
+        </div>
+      </div>
+      <!-- third row of content -->
       <div class="row align-items-center content">
         <div class="col-md-6 order-2 order-md-1">
           <img
             class="img-fluid"
-            src="./imgs/milk.png"
+            src="./imgs/sprinkles.png"
             alt="3 glasses of milk with a donut on the straw"
           />
         </div>
         <div class="col-md-6 text-center order-1 order-md-2">
           <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 blurb">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
               <h2>MUSEUM OF CANDY</h2>
               <img
                 class="d-none d-lg-inline"
@@ -154,5 +187,14 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <!-- navbar JavaScript/JQuery -->
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
   </body>
 </html>
